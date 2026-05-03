@@ -1,0 +1,31 @@
+server:
+  port: 8070
+
+spring:
+  application:
+    name: StateMachine
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/state-machine
+    username: user
+    password: pass
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: true
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+    version: openapi_3_0
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+
+system:
+  default:
+    staffId: 11111111-1111-1111-1111-111111111111
